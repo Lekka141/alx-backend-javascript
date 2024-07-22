@@ -1,5 +1,5 @@
-import getNeighborhoodsList from "../2-arrow.js";
+import GetNeighborhoodsList from '../2-arrow'; // Change to uppercase
 
-const neighborhoodsList = new getNeighborhoodsList();
+const neighborhoodsList = new GetNeighborhoodsList(); // Change to uppercase
 const res = neighborhoodsList.addNeighborhood('Noe Valley');
 console.log(res);
