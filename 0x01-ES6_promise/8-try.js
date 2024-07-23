@@ -4,4 +4,4 @@ export default function divideFunction(numerator, denominator) {
     } else {
       return numerator / denominator;
     }
-  }
+}
