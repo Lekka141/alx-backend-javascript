@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-# Java Backend 
-
-=======
 # 0x01. ES6 Promises
 
 ## JavaScript ES6
-
-**Project Weight:** 1  
-**Project Start:** Jul 23, 2024 6:00 AM  
-**Project End:** Jul 25, 2024 6:00 AM  
-**Checker Release:** Jul 23, 2024 6:00 PM  
-**Auto Review:** Launched at the deadline
 
 ## Resources
 
@@ -52,4 +42,3 @@ By the end of this project, you should be able to explain:
 curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
->>>>>>> 5e34b355 (Add README.md)
