@@ -1,9 +1,17 @@
-import Currency from './3-currency';
+import Currency from './3-currency.js';
 
+/**
+ * Represents a pricing.
+ */
 export default class Pricing {
+  /**
+   * Creates a new @see {@link Pricing}.
+   * @param {Number} amount - The amount.
+   * @param {Currency} currency - The currency.
+   */
   constructor(amount, currency) {
-    this.amount = amount;
-    this.currency = currency;
+    this._amount = amount;
+    this._currency = currency;
   }
 
   get amount() {
@@ -17,16 +25,10 @@ export default class Pricing {
     this._amount = value;
   }
 
-  /**
-   * @returns {Currency}
-   */
   get currency() {
     return this._currency;
   }
 
-  /**
-   * @param {Currency} value
-   */
   set currency(value) {
     if (!(value instanceof Currency)) {
       throw new TypeError('currency must be a Currency');
@@ -34,10 +36,20 @@ export default class Pricing {
     this._currency = value;
   }
 
+  /**
+   * Displays the full price.
+   * @returns {String} The full price.
+   */
   displayFullPrice() {
-    return `${this.amount} ${this.currency.name} (${this.currency.code})`;
+    return `${this._amount} ${this._currency.displayFullCurrency()}`;
   }
 
+  /**
+   * Converts the price.
+   * @param {Number} amount - The amount.
+   * @param {Number} conversionRate - The conversion rate.
+   * @returns {Number} The converted price.
+   */
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
       throw new TypeError('amount must be a number');

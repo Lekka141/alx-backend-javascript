@@ -1,9 +1,18 @@
-import Building from './5-building';
+import Building from './5-building.js';
 
+/**
+ * Represents a sky high building.
+ * @extends Building
+ */
 export default class SkyHighBuilding extends Building {
+  /**
+   * Creates a new @see {@link SkyHighBuilding}.
+   * @param {Number} sqft - The square footage of the building.
+   * @param {Number} floors - The number of floors in the building.
+   */
   constructor(sqft, floors) {
     super(sqft);
-    this.floors = floors;
+    this._floors = floors;
   }
 
   get floors() {
@@ -14,7 +23,11 @@ export default class SkyHighBuilding extends Building {
     this._floors = value;
   }
 
+  /**
+   * Displays an evacuation warning message.
+   * @returns {String} The evacuation warning message.
+   */
   evacuationWarningMessage() {
-    return `Evacuate slowly the ${this.floors} floors`;
+    return `Evacuate slowly the ${this._floors} floors`;
   }
 }

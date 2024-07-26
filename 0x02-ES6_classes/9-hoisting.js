@@ -1,4 +1,12 @@
+/**
+ * Represents a Holberton class.
+ */
 export class HolbertonClass {
+  /**
+   * Creates a new @see {@link HolbertonClass}.
+   * @param {Number} year - The year of the class.
+   * @param {String} location - The location of the class.
+   */
   constructor(year, location) {
     this._year = year;
     this._location = location;
@@ -13,7 +21,16 @@ export class HolbertonClass {
   }
 }
 
+/**
+ * Represents a student of Holberton.
+ */
 export class StudentHolberton {
+  /**
+   * Creates a new @see {@link StudentHolberton}.
+   * @param {String} firstName - The first name of the student.
+   * @param {String} lastName - The last name of the student.
+   * @param {HolbertonClass} holbertonClass - The class of the student.
+   */
   constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
     this._lastName = lastName;
@@ -29,8 +46,7 @@ export class StudentHolberton {
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - \
-${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
   }
 }
 

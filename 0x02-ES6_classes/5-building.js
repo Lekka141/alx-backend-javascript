@@ -1,12 +1,15 @@
+/**
+ * Represents a building.
+ */
 export default class Building {
+  /**
+   * Creates a new @see {@link Building}.
+   * @param {Number} sqft - The square footage of the building.
+   */
   constructor(sqft) {
-    this.sqft = sqft;
-    if (this.constructor !== Building) {
-      if (typeof this.evacuationWarningMessage !== 'function') {
-        throw new Error(
-          'Class extending Building must override evacuationWarningMessage',
-        );
-      }
+    this._sqft = sqft;
+    if (new.target !== Building && this.evacuationWarningMessage === undefined) {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
     }
   }
 

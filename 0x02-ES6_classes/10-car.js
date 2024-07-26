@@ -1,8 +1,17 @@
+/**
+ * Represents a car.
+ */
 export default class Car {
+  /**
+   * Creates a new @see {@link Car}.
+   * @param {String} brand - The brand of the car.
+   * @param {String} motor - The motor of the car.
+   * @param {String} color - The color of the car.
+   */
   constructor(brand, motor, color) {
-    this.brand = brand;
-    this.motor = motor;
-    this.color = color;
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
   }
 
   get brand() {
@@ -29,13 +38,7 @@ export default class Car {
     this._color = value;
   }
 
-  static get [Symbol.species]() {
-    return this;
-  }
-
   cloneCar() {
-    const Species = this.constructor[Symbol.species];
-
-    return new Species();
+    return new this.constructor(this._brand, this._motor, this._color);
   }
 }

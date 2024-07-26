@@ -1,7 +1,15 @@
+/**
+ * Represents a currency.
+ */
 export default class Currency {
+  /**
+   * Creates a new @see {@link Currency}.
+   * @param {String} code - The code of the currency.
+   * @param {String} name - The name of the currency.
+   */
   constructor(code, name) {
-    this.code = code;
-    this.name = name;
+    this._code = code;
+    this._name = name;
   }
 
   get code() {
@@ -21,10 +29,10 @@ export default class Currency {
   }
 
   /**
-   * Creates the full string representation of this Currency.
-   * @returns {String}
+   * Displays the full currency description.
+   * @returns {String} The full currency description.
    */
   displayFullCurrency() {
-    return `${this.name} (${this.code})`;
+    return `${this._name} (${this._code})`;
   }
 }
