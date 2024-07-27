@@ -2,52 +2,52 @@
  * Represents a Holberton class.
  */
 export class HolbertonClass {
-  /**
+    /**
    * Creates a new @see {@link HolbertonClass}.
    * @param {Number} year - The year of the class.
    * @param {String} location - The location of the class.
    */
-  constructor(year, location) {
-    this._year = year;
-    this._location = location;
-  }
+    constructor(year, location) {
+        this._year = year;
+        this._location = location;
+    }
 
-  get year() {
-    return this._year;
-  }
+    get year() {
+        return this._year;
+    }
 
-  get location() {
-    return this._location;
-  }
+    get location() {
+        return this._location;
+    }
 }
 
 /**
  * Represents a student of Holberton.
  */
 export class StudentHolberton {
-  /**
+    /**
    * Creates a new @see {@link StudentHolberton}.
    * @param {String} firstName - The first name of the student.
    * @param {String} lastName - The last name of the student.
    * @param {HolbertonClass} holbertonClass - The class of the student.
    */
-  constructor(firstName, lastName, holbertonClass) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._holbertonClass = holbertonClass;
-  }
+    constructor(firstName, lastName, holbertonClass) {
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this._holbertonClass = holbertonClass;
+    }
 
-  get fullName() {
-    return `${this._firstName} ${this._lastName}`;
-  }
+    get fullName() {
+        return `${this._firstName} ${this._lastName}`;
+    }
 
-  get holbertonClass() {
-    return this._holbertonClass;
-  }
+    get holbertonClass() {
+        return this._holbertonClass;
+    }
 
-  get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
-  }
+    get fullStudentDescription() {
+        return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    }
 }
 
 const class2019 = new HolbertonClass(2019, 'San Francisco');
