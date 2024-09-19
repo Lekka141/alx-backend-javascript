@@ -8,7 +8,7 @@
   },
   "jest": {
     "testMatch": [
-      "**/tests/*-main.js"
+      "**/?(*.)+(test).js"
     ]
   },
   "devDependencies": {
