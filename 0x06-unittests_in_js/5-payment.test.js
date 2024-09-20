@@ -13,22 +13,25 @@ describe('sendPaymentRequestToApi', () => {
   });
 
   afterEach(() => {
-    BigBrother.log.resetHistory();
+    BigBrother.resetHistory();
   });
 
   after(() => {
-    consoleLogSpy.restore(); // Restore console.log once after all tests
+    // Ensure to restore console.log
+    if (BigBrother) {
+      BigBrother.restore();
+    }
   });
 
   it('sendPaymentRequestToApi(100, 20) logs "The total is: 120" to the console', () => {
     sendPaymentRequestToApi(100, 20);
-    expect(BigBrother.log.calledWith('The total is: 120')).to.be.true;
-    expect(BigBrother.log.calledOnce).to.be.true;
+    expect(BigBrother.calledWith('The total is: 120')).to.be.true;
+    expect(BigBrother.calledOnce).to.be.true;
   });
 
   it('sendPaymentRequestToApi(10, 10) logs "The total is: 20" to the console', () => {
     sendPaymentRequestToApi(10, 10);
-    expect(BigBrother.log.calledWith('The total is: 20')).to.be.true;
-    expect(BigBrother.log.calledOnce).to.be.true;
+    expect(BigBrother.calledWith('The total is: 20')).to.be.true;
+    expect(BigBrother.calledOnce).to.be.true;
   });
 });
