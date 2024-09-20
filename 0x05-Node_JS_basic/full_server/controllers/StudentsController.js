@@ -1,14 +1,13 @@
 import readDatabase from '../utils';
 
 /**
- * The list of supported majors.
- */
+* The list of supported majors.
+*/
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
  * Contains the student-related route handlers.
- 
- */
+*/
 class StudentsController {
   static getAllStudents(request, response) {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
